@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Primera version de consumo de API </h1>
+
+    <h2> Usuario </h2>
+    <div>
+        <label>Nombres</label>
+        <input type="text" id="usuario__Nombre">
+        <label>Apellidos</label>
+        <input type="text" id="usuario__Apellido">
+        <label>Email</label>
+        <input type="email" id="usuario__Email">
+        <label>Constraseña</label>
+        <input type="password" id="usuario__Contrasenia">
+        <label>Fecha de nacimiento</label>
+        <input type="date" id="usuario__FechaNacimiento">
+        <label>Tipo_cuenta</label>
+        <input type="text" id="usuario__TipoCuenta">
+    </div>
+
+    <h2> Producto </h2>
+    <div>
+        <label>Nombre</label>
+        <input type="text" id="producto__Nombre">
+        <label>Descripción</label>
+        <input type="text" id="producto__Descripcion">
+        <label>Precio menudeo</label>
+        <input type="text" id="producto__PrecioMenudeo">
+        <label>Precio mayoreo</label>
+        <input type="text" id="producto__PrecioMayoreo">
+        <label>Cantidad</label>
+        <input type="text" id="producto__Cantidad">
+        <label>Fecha de Produccion</label>
+        <input type="date" id="producto__FechaProduccion">
+        <label>ID categoría </label>
+        <input type="text" id="producto__IDCategoria">
+        <label>ID vendedor</label>
+        <input type="text" id="producto__IDVendedor">
+    </div>
+
+    <h2> Categoría </h2>
+    <div>
+        <label>Nombre</label>
+        <input type="text" id="categoria__Nombre">
+
+    </div>
+   
+    <div>
+        <button onclick = "postUsuario()"> POST Usuario </button>
+        <button onclick = "postCategoria()"> POST Categoria </button>
+        <button onclick = "postProducto()"> POST Producto </button>
+    </div>
+
+    <div>
+        <button onclick = "getUsuario()"> GET Usuario </button>
+        <button onclick = "getCategoria()"> GET Categoria </button>
+        <button onclick = "getProducto()"> GET Producto </button>
+    </div>
+
+    <div id = "resultado__Usuario"> </div>
+    <div id = "resultado__Categoria"> </div>
+    <div id = "resultado__Producto"> </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="restAPI.js"></script>
+</body>
+</html
