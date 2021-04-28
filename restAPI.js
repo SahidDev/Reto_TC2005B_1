@@ -342,7 +342,6 @@ function getProducto() {
 
             $('#resultado__Producto').html(htmlTableUsers);
 
-
         }
     );
 }
