@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
+<body onload="getUsuario()">
     <nav class="navbar navbar-expand-sm navbar-custom">
         <a class="navbar-brand" href="/index.html">Reto TC2005B.1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="/usuarios.html">Usuarios</a>
                 </li>
                 <li class="nav-item">
@@ -30,14 +30,20 @@
         </div>
     </nav>
 
-    <div class="jumbotron">
-        <h1 class="display-4">Construcción de software y toma de decisiones TC2005B.1</h1>
-        <h1 class="display-6">Proyecto final</h1>
-        <hr class="my-4">
-        <p>Daniela Hernández y Hernández &nbsp; A01730397</p>
-        <p>David Eduardo Santiago Sánchez &nbsp; A01733753</p>
-        <p>Rafael Alfonso Gómez González &nbsp; A01733983</p>
-        <p>Sahid Emmanuel Rosas Maas &nbsp; A01734211</p>
+
+    <div class="cont">
+        <div class="row">
+            <h1 class="h1-user">Usuarios</h1>
+            <a href="/crear_usuario.html"><button type="button" >Crear usuario</button></a>
+        </div>
+
+        <div id="resultado__Usuario"></div>
+
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="restAPI.js"></script>
+
 </body>
+
 </html>
