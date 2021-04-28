@@ -28,9 +28,68 @@ function postUsuario() {
         contentType: 'application/json',
         success: function (data) {
             console.log(data);
-            $('#resultado__Usuario').html(JSON.stringify(data.user));
+            $('#resultado__Usuario').html(JSON.stringify(data.usuarios));
         },
         data: JSON.stringify(myUsuario)
+    });
+}
+
+function postCategoria() {
+    var myNombre = $('#categoria__Nombre').val();
+    
+    var myUsuario = {
+        nombre: myNombre,
+    };
+
+    console.log(myUsuario);
+
+    $.ajax({
+        url: urlCategoria,
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (data) {
+            console.log(data);
+            $('#resultado__Categoria').html(JSON.stringify(data.categoria));
+        },
+        data: JSON.stringify(myUsuario)
+    });
+}
+
+function postProducto() {
+    var myNombre = $('#producto__Nombre').val();
+    var myDescripcion = $('#producto__Descripcion').val();
+    var myPrecioMenudeo = $('#producto__PrecioMenudeo').val();
+    var myPrecioMayoreo = $('#producto__PrecioMayoreo').val();
+    var myCantidad = $('#producto__Cantidad').val();
+    var myFechaDeProduccion = $('#producto__FechaProduccion').val();
+    var myIDCategoria = $('#producto__IDCategoria').val();
+    var myIDVendedor = $('#producto__IDVendedor').val();
+
+
+    var myProducto = {
+        nombre: myNombre,
+        descripcion: myDescripcion,
+        precio_menudeo: myPrecioMenudeo,
+        precio_mayoreo: myPrecioMayoreo,
+        cantidad: myCantidad,
+        fecha_prod: myFechaDeProduccion,
+        categoriaId: myIDCategoria,
+        vendedorId: myIDVendedor,
+    };
+
+    console.log(myProducto);
+
+    $.ajax({
+        url: urlProducto,
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (data) {
+            console.log(data);
+            $('#resultado__Producto').html(JSON.stringify(data.productos));
+        },
+        data: JSON.stringify(myProducto)
     });
 }
 
@@ -59,6 +118,64 @@ function getUsuario() {
             htmlTableUsers += '</table>';
     
            $('#resultado__Usuario').html(htmlTableUsers);
+    
+    
+        }
+      );
+}
+
+function getCategoria() {
+    $.getJSON(urlCategoria,
+        function(json) {
+           console.log(json);
+    
+            var varCategorias = json.categorias;
+    
+            var htmlTableUsers = '<table border=1">';
+    
+            varCategorias.forEach(function(item) {
+               console.log(item);
+               htmlTableUsers += '<tr>' +
+                                        '<td>' + item.id + '</td>' +
+                                        '<td>' + item.nombre + '</td>' +
+                                  '</tr>';
+            });
+    
+            htmlTableUsers += '</table>';
+    
+           $('#resultado__Categoria').html(htmlTableUsers);
+    
+    
+        }
+      );
+}
+
+function getProducto() {
+    $.getJSON(urlProducto  ,
+        function(json) {
+           console.log(json);
+    
+            var arrProductos = json.productos;
+    
+            var htmlTableUsers = '<table border=1">';
+    
+            arrProductos.forEach(function(item) {
+               console.log(item);
+               htmlTableUsers += '<tr>' +
+                                        '<td>' + item.id + '</td>' +
+                                        '<td>' + item.nombre + '</td>' +
+                                        '<td>' + item.descripcion + '</td>' +
+                                        '<td>' + item.precio_menudeo + '</td>' +
+                                        '<td>' + item.precio_mayoreo + '</td>' +
+                                        '<td>' + item.cantidad + '</td>' +
+                                        '<td>' + item.fecha_prod + '</td>' +
+                                        '<td>' + item.categoriaId + '</td>' +
+                                  '</tr>';
+            });
+    
+            htmlTableUsers += '</table>';
+    
+           $('#resultado__Producto').html(htmlTableUsers);
     
     
         }
