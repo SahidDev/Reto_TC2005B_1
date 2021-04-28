@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #14213d;
+}
+
+.navbar-custom {
+    background-color: #14213d;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #e5e5e5;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #e5e5e5;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #fca311;
+}
+
+.jumbotron {
+    margin: 4em 6em;
+    font-family: 'Lato', sans-serif;
+}
+
+.cont {
+    margin: 4em 12em;
+}
+
+.cont-cat {
+    margin: 4em 0 0 20em;
+}
+
+.row {
+    margin: 2em auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.h1-user {
+    font-size: 3rem;
+    width: 48%;
+}
+
+.h1-create-u {
+    font-size: 3rem;
+    width: 52%;
+}
+
+button {
+    background-color: #fca311;
+    color: #e5e5e5;
+    height: 2.5em;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 1em;
+}
+
+button:hover {
+    background-color: #fd9c00;
+    color: white;
+}
+
+button a {
+    text-decoration: none;
+    margin: 0;
+}
+
+.password {
+    -webkit-text-security: disc;
+}
+
+.button-form {
+    margin: 2em 0.1em;
+}
+
+.obtener {
+    margin: 0 0 2em 0;
+}
+
+.invalid {
+    border-color: red;
+}

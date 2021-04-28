@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <a class="navbar-brand" href="./index.html">Reto TC2005B.1</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./usuarios.html">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./categorias.html">Categorías</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cont">
+        <div class="row">
+            <h1 class="h1-create-u">Crear producto</h1>
+            <a href="./productos.html"><button type="button">Regresar</button></a>
+        </div>
+
+        <div class="cont">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="producto__Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="desc">Descripción</label>
+                    <input type="text" class="form-control" id="producto__Descripcion">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="price-min">Precio menudeo</label>
+                    <input type="text" class="form-control" id="producto__PrecioMenudeo">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="price-max">Precio mayoreo</label>
+                    <input type="text" class="form-control" id="producto__PrecioMayoreo">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="stock">Stock</label>
+                    <input type="number" class="form-control" id="producto__Cantidad">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fecha">Fecha de producción</label>
+                    <input type="date" class="form-control" id="producto__FechaProduccion">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Categoría</label>
+                    <input type="number" class="form-control" id="producto__IDCategoria">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>ID del vendedor</label>
+                    <input type="number" class="form-control" id="producto__IDVendedor">
+                </div>
+            </div>
+            <div class="form-row">
+                <button class="button-form" onclick="postProducto()">Crear producto</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="restAPI.js "></script>
+</body>
+
+</html>

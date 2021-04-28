@@ -10,8 +10,9 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-sm navbar-custom">
-        <a class="navbar-brand" href="/index.html">Reto TC2005B.1</a>
+        <a class="navbar-brand" href="./index.html">Reto TC2005B.1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,14 +31,28 @@
         </div>
     </nav>
 
-    <div class="jumbotron">
-        <h1 class="display-4">Construcción de software y toma de decisiones TC2005B.1</h1>
-        <h1 class="display-6">Proyecto final</h1>
-        <hr class="my-4">
-        <p>Daniela Hernández y Hernández &nbsp; A01730397</p>
-        <p>David Eduardo Santiago Sánchez &nbsp; A01733753</p>
-        <p>Rafael Alfonso Gómez González &nbsp; A01733983</p>
-        <p>Sahid Emmanuel Rosas Maas &nbsp; A01734211</p>
+    <div class="cont">
+        <div class="row">
+            <h1 class="h1-create-u">Crear categoría</h1>
+            <a href="./categorias.html"><button type="button">Regresar</button></a>
+        </div>
+
+        <div class="cont-cat">
+            <div class="form-row">
+                <div class="col-md-10">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="categoria__Nombre">
+                </div>
+            </div>
+            <div class="form-row">
+                <button class="button-form" onclick="postCategoria()">Crear categoría</button>
+            </div>
+        </div>
     </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="restAPI.js"></script>
 </body>
+
 </html>
