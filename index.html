@@ -20,7 +20,7 @@
         <label>Constraseña</label>
         <input type="password" id="usuario__Contrasenia">
         <label>Fecha de nacimiento</label>
-        <input type="text" id="usuario__FechaNacimiento">
+        <input type="date" id="usuario__FechaNacimiento">
         <label>Tipo_cuenta</label>
         <input type="text" id="usuario__TipoCuenta">
     </div>
@@ -37,6 +37,12 @@
         <input type="text" id="producto__PrecioMayoreo">
         <label>Cantidad</label>
         <input type="text" id="producto__Cantidad">
+        <label>Fecha de Produccion</label>
+        <input type="date" id="producto__FechaProduccion">
+        <label>ID categoría </label>
+        <input type="text" id="producto__IDCategoria">
+        <label>ID vendedor</label>
+        <input type="text" id="producto__IDVendedor">
     </div>
 
     <h2> Categoría </h2>
@@ -48,19 +54,19 @@
    
     <div>
         <button onclick = "postUsuario()"> POST Usuario </button>
-        <!-- <button onclick = "postProducto()"> POST Producto </button> -->
-        <!-- <button onclick = "postCategoria()"> POST Categoria </button> -->
+        <button onclick = "postCategoria()"> POST Categoria </button>
+        <button onclick = "postProducto()"> POST Producto </button>
     </div>
 
     <div>
         <button onclick = "getUsuario()"> GET Usuario </button>
-        <!--<button onclick = "getProducto()"> GET Producto </button> -->
-        <!-- <button onclick = "getCategoria()"> GET Categoria </button> -->
+        <button onclick = "getCategoria()"> GET Categoria </button>
+        <button onclick = "getProducto()"> GET Producto </button>
     </div>
 
     <div id = "resultado__Usuario"> </div>
-    <div id = "resultado__Producto"> </div>
     <div id = "resultado__Categoria"> </div>
+    <div id = "resultado__Producto"> </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="restAPI.js"></script>
